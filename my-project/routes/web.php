@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CalenderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('calender', CalenderController::class);
+    Route::resource('event', EventController::class);
 });
 
 require __DIR__.'/auth.php';
