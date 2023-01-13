@@ -51,7 +51,7 @@ class CalenderController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('calender.show', ['item' => Calender::find($id)]);
     }
 
     /**

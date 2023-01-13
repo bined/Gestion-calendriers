@@ -25,6 +25,7 @@
                                 <td>{{ $item->title }}</td>
                                 <td>{{ $item->created_at->toDateTimeString() }}</td>
                                 <td>
+                                    <a href="{{ route('calender.show', $item->id) }}" class="btn btn-primary btn-sm table-btn-action">Afficher</a>
                                     <a href="{{ route('calender.edit', $item->id) }}" class="btn btn-success btn-sm table-btn-action">Edit</a>
                                     <form action="{{ route('calender.destroy', $item->id) }}}" method="post">
                                         @csrf

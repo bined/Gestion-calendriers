@@ -52,5 +52,6 @@
                     $( ".datepicker" ).datepicker();
                 } );
             </script>
+        @stack('js')
     </body>
 </html>
